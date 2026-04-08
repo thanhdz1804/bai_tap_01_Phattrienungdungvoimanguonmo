@@ -4,12 +4,12 @@ Lớp: 58KTPM
 Bài tập 01:
 deadline : 23h59 ngày 13 tháng 4 năm 2026.
 ## A. Đăng ký tên miền xịn cho cá nhân:
-### Đăng ký domain xịn (có thể dùng của mắt bão, tên miền *.id.vn đang miễn phí cho mọi công dân việt nam <= 23 tuổi, *.io.vn : giá 30k vnđ/năm)
+## Đăng ký domain xịn (có thể dùng của mắt bão, tên miền *.id.vn đang miễn phí cho mọi công dân việt nam <= 23 tuổi, *.io.vn : giá 30k vnđ/năm)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0c74e421-adbd-4699-93b3-42b1230b3d3e" />
 ### Đăng ký tài khoản cloudflare
 <img width="1728" height="1044" alt="image" src="https://github.com/user-attachments/assets/f6920d80-9cd8-4b10-9aa6-be01b0d28ed1" />
 Thêm domain đã đăng ký vào trong cloudflare : Nhận 2 dòng namespace
-### Nhập 2 dòng namespace của cloudflare vào trong trang quản lý DNS record của tên miền đăng ký 
+## Nhập 2 dòng namespace của cloudflare vào trong trang quản lý DNS record của tên miền đăng ký 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fb3f0de3-44d7-4fd0-9bae-4a4604511489" />
 # B. Cài đặt Ubuntu + Docker
 # Cài đặt hệ điều hành Ubuntu 24.04.4 LTS
@@ -46,22 +46,23 @@ docker stop <id>     # dừng container
 docker rm <id>       # xóa container
 ## 7Đảm bảo tường lửa trên Ubuntu đã cho phép các cổng 80, 1880, 9630 (Lệnh: sudo ufw allow ...)
 <img width="1105" height="639" alt="image" src="https://github.com/user-attachments/assets/1c9e9b22-d400-4540-b80b-016f7d985834" />
-C. Cấu hình docker compose:
-Tạo thư mục: ~/myapp
-Chuyển vào trong thư mục ~/myapp
-Tạo thư mục: ./myweb
-Tạo file ./myweb/index.html (với nội dung là thông tin cá nhân của em)
-Tạo file docker-compose.yml để nó sẽ có các dịch vụ sau:
+# C. Cấu hình docker compose:
+1. Tạo thư mục: ~/myapp
+<img width="1099" height="631" alt="image" src="https://github.com/user-attachments/assets/03472ac2-2238-4f6f-a779-a44ac27782b0" />
+2. Chuyển vào trong thư mục ~/myapp
+4. Tạo thư mục: ./myweb
+5. Tạo file ./myweb/index.html (với nội dung là thông tin cá nhân của em)
+6. Tạo file docker-compose.yml để nó sẽ có các dịch vụ sau:
 Khai báo sử dụng nodered/node-red, cổng 1880, dữ liệu nằm tại thư mục ./nodered
 Khai báo sử dụng nginx, cổng 80, cấu hình trong file ./nginx/nginx.conf
 Mount thư mục ./myweb thành thư mục /myweb trong nginx
 Mount file ./nginx/nginx.conf vào file /etc/nginx/nginx.conf trong nginx
-Edit file ./nginx/nginx.conf để:
+7. Edit file ./nginx/nginx.conf để:
 Cấu hình web server cổng 80
 server_name là sub-domain (sub-domain tuỳ ý của em)
 location / trỏ tới root là thư mục /myweb
 location /api dùng proxy_pass trỏ tới 1 (hoặc nhiều) node http_in của nodered
-Edit file ./nodered/settings.js để nodered bắt buộc đăng nhập
+8. Edit file ./nodered/settings.js để nodered bắt buộc đăng nhập
 Chạy docker-compose lần đầu để Node-RED tự sinh file cấu hình trong thư mục ./nodered, sau đó mới tiến hành sửa settings.js và restart lại container
 
 D. (Bonus - không bắt buộc)
