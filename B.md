@@ -7,14 +7,15 @@
 
 ### sau đó chọn cấu hình như bình thường cài tài khoản mật khẩu với ubuntu để chuẩn bị bước ssh
 
-Cấu hình mạng trong Ubuntu (và công cụ giả lập) để cho phép truy cập SSH vào Ubuntu từ cmd của windows
-<img width="1115" height="643" alt="image" src="https://github.com/user-attachments/assets/b5d0fe19-a43e-4252-9f4d-3af27b82e44c" />
+#### Cấu hình mạng trong Ubuntu (và công cụ giả lập) để cho phép truy cập SSH vào Ubuntu từ cmd của windows
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1d72d0d1-9c87-4882-8dbd-523a6a8327d6" />
 
 # 1. Tìm hiểu các lệnh cơ bản của 
 
 # 2. Các lệnh cần tìm hiểu:
 
 ## - Liệt kê các file trong thư mục: ls
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/968e8724-4aac-49e1-a5a1-9ea753ab676b" />
 
 ## - Tạo thư mục: mkdir nameFolder
 
