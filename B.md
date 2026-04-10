@@ -57,12 +57,12 @@ CTRL+x : thoát edit file
 
 # 6 Tìm hiểu tập lệnh của docker và docker compose
 
-docker ps            # xem container đang chạy
-docker ps -a         # xem tất cả container
-docker images        # xem danh sách image
-docker run           # chạy container
-docker stop <id>     # dừng container
-docker rm <id>       # xóa container
+- docker ps            # xem container đang chạy
+- docker ps -a         # xem tất cả container
+- docker images        # xem danh sách image
+- docker run           # chạy container
+- docker stop <id>     # dừng container
+- docker rm <id>       # xóa container
 
 # 7Đảm bảo tường lửa trên Ubuntu đã cho phép các cổng 80, 1880, 9630 (Lệnh: sudo ufw allow ...)
 
